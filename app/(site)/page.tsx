@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import ListItem from "@/components/ListItem";
 
 
 export default function Home() {
@@ -17,13 +18,33 @@ export default function Home() {
           2xl:grid-cols-4
           gap-3
           mt-4">
-            <ListItem/>
+            <ListItem
+            image="/images/liked.jpg"
+            name="Liked Songs"
+            href="liked"/>
 
           </div>
 
         </div>
 
       </Header>
+<div className="mt-2 mb-7 px-6 ">
+  <div className="
+  flex
+  justify-between
+  items-center
+  ">
+    <h1 className="text-white text-2xl font-semibold ">
+      Newest Songs
+    </h1>
+  </div>
+  <div>
+    List of Songs!
+  </div>
+
+
+</div>
+
     </div>
   );
 }
