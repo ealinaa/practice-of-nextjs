@@ -3,12 +3,13 @@ import { title } from "process";
 import "./globals.css";
 import { Figtree } from 'next/font/google'
 import Sidebar from "@/components/Sidebar";
+import SupabaseProvider from "@/providers/SuperbaseProvider";
 
-const font = Figtree({subsets : ['latin']})
+const font = Figtree({ subsets: ['latin'] })
 
-export const metadata=  {
+export const metadata = {
   title: 'Spotify Clone',
-  description:" Listen to music !! ",
+  description: " Listen to music !! ",
 }
 
 export default function RootLayout({
@@ -20,9 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Sidebar>
-        {children}
-        </Sidebar>
+        <SupabaseProvider>
+
+          <Sidebar>
+            {children}
+          </Sidebar>
+        </SupabaseProvider>
       </body>
     </html>
   )
