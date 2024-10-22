@@ -2,6 +2,7 @@
 
 
 import useAuthModal from '@/hooks/useAuthModal';
+import useUploadModal from '@/hooks/useUploadModal';
 import { useUser } from '@/hooks/useUser';
 
 import React from 'react'
@@ -12,11 +13,15 @@ import { TbPlaylist } from 'react-icons/tb';
 
 const Library = () => {
     const authModal = useAuthModal();
-    const { user } = useUser()
+    const uploadModal = useUploadModal()
+    const { user} = useUser()
     const onClick = () => {
         if(!user) {
             return authModal.onOpen()
         }
+        //TODO: check for subscription
+
+        return uploadModal.onOpen()
         //handle upload later
     };
   return (
