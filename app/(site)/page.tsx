@@ -1,6 +1,7 @@
 import getSongs from "@/actions/getSongs";
 import Header from "@/components/Header";
 import ListItem from "@/components/ListItem";
+import PageContent from "./PageContent";
 
 export const revalidate = 0
 export default async function Home() {
@@ -40,11 +41,12 @@ export default async function Home() {
       Newest Songs
     </h1>
   </div>
-  <div>
+  <PageContent songs={songs}/>
+  {/* <div>
     List of Songs!
 
     {songs.map((song) => <div> {song.title} </div>)}
-  </div>
+  </div> */}
 
 
 </div>
