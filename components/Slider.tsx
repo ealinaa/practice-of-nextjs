@@ -37,7 +37,14 @@ const Slider:React.FC<SliderProps>= ({
         grow
         rounded-full
         h-[3px]">
-            
+            <RadixSlider.Range className="
+            absolute
+            bg-white
+            rounded-full
+            h-full">
+
+            </RadixSlider.Range>
+
 
         </RadixSlider.Track>
 
